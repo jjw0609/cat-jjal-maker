@@ -34,7 +34,11 @@
     <script type="text/babel">
       console.log("야옹");
 
-      const title = <h1>1번째 고양이 가라사대2</h1>;
+      const Title = (props) => {
+        return (
+          <h1>{props.children}</h1>
+        );
+      }
 
       const form = (
         <form>
@@ -43,43 +47,49 @@
         </form>
       );
 
-      const catItem = (
-              <li>
-                <img src="https://cataas.com/cat/HSENVDU4ZMqy7KQ0/says/react" alt="고양이"/>
-              </li>
-      );
+      function CatItem(props) {
+        return (
+          <li>
+            <img src={props.img} alt="고양이"/>
+          </li>
+        );
+      }
 
-      const favorites = (
-        <ul className="favorites">
-          {catItem}
-          {catItem}
-          {catItem}
-        </ul>
-      );
+      function Favorites() {
+        return (
+          <ul className="favorites">
+            <CatItem img="https://cataas.com/cat/BxqL2EjFmtxDkAm2/says/inflearn"/>
+            <CatItem img="https://cataas.com/cat/18MD6byVC1yKGpXp/says/JavaScript"/>
+          </ul>
+        );
+      }
 
-      const mainCard = (
-        <div className="main-card">
-          <img
-                  src="https://cataas.com/cat/HSENVDU4ZMqy7KQ0/says/react"
-                  alt="고양이"
-                  width="400"
-          />
-          <button>🤍</button>
-        </div>
-      );
+      const MainCard = () => {
+        return (
+          <div className="main-card">
+            <img
+              src="https://cataas.com/cat/HSENVDU4ZMqy7KQ0/says/react"
+              alt="고양이"
+              width="400"
+            />
+            <button>🤍</button>
+          </div>
+        );
+      }
 
       const app = (
         <div>
-          {title}
+          <Title>1번째 고양이 가라사대</Title>
+          <Title>2번째 고양이 가라사대</Title>
           {form}
-          {mainCard}
-          {favorites}
+          <MainCard />
+          <Favorites/>
         </div>
       );
 
       const 여기다가그려 = document.querySelector('#app');
 
-      ReactDOM.createRoot(여기다가그려).render(favorites);
+      ReactDOM.createRoot(여기다가그려).render(Favorites);
     </script>
   </body>
 </html>
