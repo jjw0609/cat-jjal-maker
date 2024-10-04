@@ -40,7 +40,7 @@
         );
       }
 
-      const form = (
+      const Form = () => (
         <form>
           <input type="text" name="name" placeholder="영어 대사를 입력해주세요"/>
           <button type="submit">생성</button>
@@ -64,14 +64,10 @@
         );
       }
 
-      const MainCard = () => {
+      const MainCard = ({img}) => {
         return (
           <div className="main-card">
-            <img
-              src="https://cataas.com/cat/HSENVDU4ZMqy7KQ0/says/react"
-              alt="고양이"
-              width="400"
-            />
+            <img src={img} alt="고양이" width="400" />
             <button>🤍</button>
           </div>
         );
@@ -81,8 +77,8 @@
         <div>
           <Title>1번째 고양이 가라사대</Title>
           <Title>2번째 고양이 가라사대</Title>
-          {form}
-          <MainCard />
+          <Form />
+          <MainCard img="https://cataas.com/cat/HSENVDU4ZMqy7KQ0/says/react" />
           <Favorites/>
         </div>
       );
