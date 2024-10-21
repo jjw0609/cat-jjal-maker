@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import React from "react";
 import Title from "./components/Title";
 import "./App.css";
@@ -64,7 +63,7 @@ const Form = ({ updateMainCat }) => {
 function CatItem(props) {
   return (
       <li>
-        <img src={props.img} style={{ width: "150px" }} />
+        <img src={props.img} style={{ width: "150px" }} alt="고양이" />
       </li>
   );
 }
@@ -95,8 +94,6 @@ const MainCard = ({ img, onHeartClick, alreadyFavorite }) => {
 
 const App = () => {
   const CAT1 = "https://cataas.com/cat/HSENVDU4ZMqy7KQ0/says/react";
-  const CAT2 = "https://cataas.com/cat/BxqL2EjFmtxDkAm2/says/inflearn";
-  const CAT3 = "https://cataas.com/cat/18MD6byVC1yKGpXp/says/JavaScript";
 
   const [counter, setCounter] = React.useState(() => {
     return jsonLocalStorage.getItem("counter");
