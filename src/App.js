@@ -26,7 +26,9 @@ const Form = ({ updateMainCat }) => {
 
   function handleInputChange(e) {
     const userValue = e.target.value;
+
     setErrorMessage("");
+
     if (includesHangul(userValue)) {
       setErrorMessage("한글은 입력할 수 없습니다.");
     }
