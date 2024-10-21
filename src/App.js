@@ -94,8 +94,7 @@ const MainCard = ({ img, onHeartClick, alreadyFavorite }) => {
 const App = () => {
   const CAT1 = "https://cataas.com/cat/HSENVDU4ZMqy7KQ0/says/react";
   const CAT2 = "https://cataas.com/cat/BxqL2EjFmtxDkAm2/says/inflearn";
-  const CAT3 =
-      "https://cataas.com/cat/18MD6byVC1yKGpXp/says/JavaScript";
+  const CAT3 = "https://cataas.com/cat/18MD6byVC1yKGpXp/says/JavaScript";
 
   const [counter, setCounter] = React.useState(() => {
     return jsonLocalStorage.getItem("counter");
