@@ -93,10 +93,12 @@ const MainCard = ({ img, onHeartClick, alreadyFavorite }) => {
 };
 
 const App = () => {
+  const CAT1 = "https://cataas.com/cat/HSENVDU4ZMqy7KQ0/says/react";
+
   const [counter, setCounter] = React.useState(() => {
     return jsonLocalStorage.getItem("counter");
   });
-  const [mainCat, setMainCat] = React.useState("");
+  const [mainCat, setMainCat] = React.useState(CAT1);
   const [favorites, setFavorites] = React.useState(() => {
     return jsonLocalStorage.getItem("favorites") || [];
   });
