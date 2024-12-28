@@ -1,6 +1,6 @@
 # 고양이 짤방 생성기
 
-https://jjw.github.io/cat-jjal-maker/
+https://jjw0609.github.io/cat-jjal-maker/
 
 > 고양이 짤방을 생성하는 리액트 앱입니다
 
